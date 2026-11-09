@@ -1,0 +1,23 @@
+# Vulnerability scan exceptions (T0.09). `make vuln-scan` reads this file.
+#
+# Every exception needs a Sol approver and an expiry date; the parser enforces
+# it (`approver` must be exactly `Sol`, case-sensitive, and any other value is
+# an error that names the line number). An entry waives a
+# finding by advisory ID or alias (GO-..., CVE-..., GHSA-...) through the END
+# of the `expires` day, UTC. After that the entry no longer waives anything
+# and fails the run itself, so stale exceptions cannot linger: remove it or
+# renew it with a new approval.
+#
+# Accepted shape only (no YAML features beyond this; a mistake is an error
+# that names the line number):
+#
+#   entries:
+#     - id: GO-2024-2687
+#       reason: short single-line text
+#       approver: Sol
+#       expires: 2026-12-31
+#
+# All four keys are required, in any order. Values are single-line plain
+# scalars or double-quoted without escapes. `entries: []` means no
+# exceptions.
+entries: []

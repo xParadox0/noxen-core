@@ -1,0 +1,28 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+bin/
+# "coverage/" is test-coverage output; tools/coverage is the repository tool
+# and tools/coverage/cmd/coverage is its command, so both are re-included.
+coverage/
+!tools/coverage/
+!tools/coverage/cmd/coverage/
+# Coverage output and reports written under the tool stay ignored.
+tools/coverage/coverage/
+tools/coverage/**/*.html
+tools/coverage/**/*.cover
+*.test
+*.out
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store

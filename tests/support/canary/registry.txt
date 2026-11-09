@@ -1,0 +1,15 @@
+# Canary registry for tools/evidencescan (make evidence-scan) and
+# internal/redact (T0.10).
+#
+# Format: one synthetic canary value per line. Blank lines and lines whose
+# first non-blank character is "#" are ignored; a trailing CR is ignored;
+# duplicates are ignored. A value is 12 to 256 bytes of printable ASCII
+# without spaces (0x21 to 0x7e) and does not start with "#". Any other line
+# makes the whole file an error that names only the line number.
+#
+# Values come from canary.New (tests/support/canary), which returns
+# "NXCANARY-<kind>-<32 hex>", and are appended with canary.Register. Never put
+# a real credential here: a registered value is something the scan must NOT
+# find in evidence, so it is published by design.
+#
+# This committed file holds no value.

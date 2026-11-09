@@ -1,0 +1,7 @@
+# Paired with expired-exception.json (a clean govulncheck stream): the entry
+# expired on 2026-01-31 and no scan finding mentions it.
+entries:
+  - id: GO-2024-0001
+    reason: stale waiver kept after the fix landed
+    approver: Sol
+    expires: 2026-01-31

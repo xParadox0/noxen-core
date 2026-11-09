@@ -1,0 +1,5 @@
+entries:
+  - id: GO-2026-6617
+    reason: not reachable in production builds
+    approver: Sol
+    expires: 2026-12-31

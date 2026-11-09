@@ -1,0 +1,4 @@
+#!/bin/sh
+# Rejects commits that break the TDD commit rules (see tools/commitcheck).
+# Install with `make hooks-install`; remove with `git config --unset core.hooksPath`.
+exec go run ./tools/commitcheck/cmd/commitcheck "$1"

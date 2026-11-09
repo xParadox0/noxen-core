@@ -1,0 +1,12 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "noxen-studio/example:local",
+  "ArtifactType": "container_image",
+  "Results": [
+    {
+      "Target": "noxen-studio/example:local (alpine 3.20.3)",
+      "Class": "os-pkgs",
+      "Type": "alpine"
+    }
+  ]
+}
